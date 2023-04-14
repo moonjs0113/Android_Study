@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    package="com.example.marchapp" // 앱 패키지 이름-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarchApp"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+<!--        intent-filter: 첫화면        -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+windowSoftInputMode
+stateHidden = 키보드 안 보임
+stateVisible = 보임
+adjustNothing = 작동 안함
+adjustResize = 리사이징
+adjustpan = 스크롤올려줌
+
+allowBackup
+안드로이드 시스템에서 제공하는 백업기능에 이앱을 포함할지 여부
+true: 앱을 삭제하고 다시 설치할 대 기존에 사용하던 정보를 복원
+false: 항상 새로 설치되고, 초기화된 상태로 실행
+
+icon
+런처 아이콘
+
+label
+런처 라벨(앱 이름)
+
+roundIcon
+라운드 아이콘
+
+supportsRtl
+이슬람 문화권 Right To Left를 지원하는지 여부
+
+theme
+앱의 테마 앱의 기본 색상과 모양 결정
+-->
+
+    </application>
+
+</manifest>
+
+<!--
+4가지(엑티비티, 서비스, 브로드케스트리시버, 컨텐트프로바이더) 컴포넌트들은 항상 Manifest에 등록되어야한다.
+
+res
+Drawable
+    이미지(png,jpg,gif)
+    R.drawable.이미지이름 or @drawable/파일이름
+    대문자 시작 안됨
+Layout
+    액티비티 레이아웃을 정의하는 XML
+    R.layout.파일이름
+Mipmap
+    각기 다른 런처 아이콘 해상도에 대한 이미지 파일
+    R.mipmap.이미지이름 or @mipmap/파일이름
+Values
+    코드와 레이아웃 모두에서 사용할 수 있는 고통 리소스를 정의한 XML
+        Colors.xml 컬러값 정의 -> @color/name
+        String.xml 문자열 정의 -> @string/name
+        Styles.xml 스타일 정의 -> @style/name
+
+Gradle Scripts
+복잡한 빌드 과정을 수비게 적용하기 위한 안드 공식빌트툴
+build.gradle, settings.gradle: Gradle이 빌드를 시작하기 위해서 필요한 설정 정보
+
+settings.gradle
+Gradle이 Gradle플러그인 및 관련된 Dependencies를 탐색하거나 다운로드하기 위한 저장소
+프로젝트의 모든 모듈에서 사용할 저장소 및 Dependencies
+
+build.gradle
+빌드 파일정리, 종속 항목 정의
+build.gradle(Module)
+모듈 빌드 파일, 앱에 직접 적용될 빌드 구성(Configure)을 정의
+
+-->
